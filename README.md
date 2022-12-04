@@ -4,6 +4,7 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Technical Choices](#technical_choices)
 
 ## About <a name = "about"></a>
 
@@ -51,3 +52,11 @@ And finally run the project:
 ```bash
 npm run dev
 ```
+
+## Technical Choices <a name = "technical_choices"></a>
+
+- [Vite](https://vitejs.dev/) - A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Typescript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+- [CSS Modules](https://vitejs.dev/guide/features.html#css-modules) - A CSS file in which all class names and animation names are scoped locally by default.
+- [UUID](https://www.npmjs.com/package/uuid) - A library to generate unique identifiers.
