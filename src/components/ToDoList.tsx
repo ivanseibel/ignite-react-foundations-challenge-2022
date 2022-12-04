@@ -1,5 +1,5 @@
 import styles from './ToDoList.module.css'
-import clipboard from '../assets/clipboard.svg'
+import { EmptyList } from './EmptyList'
 
 export function ToDoList() {
   return (
@@ -17,17 +17,7 @@ export function ToDoList() {
       </header>
 
       <main className={styles.toDoList}>
-        <div className={styles.emptyList}>
-          <img src={clipboard} alt="Clipboard image" />
-          <p>
-            <strong>
-              You still have no tasks
-            </strong>
-            <span>
-              Add a task to start your day
-            </span>
-          </p>
-        </div>
+        <EmptyList />
       </main>
       
     </div>
