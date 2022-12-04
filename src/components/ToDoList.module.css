@@ -1,0 +1,70 @@
+.toDo {
+  margin-top: 4rem;
+}
+
+.toDo > header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.toDo > header > div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.createdSummary > span {
+  font-size: var(--font-medium);
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.dueSummary > span {
+  font-size: var(--font-medium);
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: var(--gray-400);
+  border-radius: 0.75rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.toDoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+  min-height: 15.25rem;
+}
+
+.emptyList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.emptyList > img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.emptyList > p {
+  font-size: var(--font-large);
+  color: var(--gray-300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
