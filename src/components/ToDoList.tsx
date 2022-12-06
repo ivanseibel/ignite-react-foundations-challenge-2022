@@ -1,36 +1,13 @@
 import styles from './ToDoList.module.css'
 import { EmptyList } from './EmptyList'
 import { ToDoItem } from './ToDoItem'
+import { ToDo, useToDo } from '../hooks/useToDo';
 
-const tasks = [
-  {
-    id: 1,
-    description: 'Ut dolor sunt proident amet sit enim et irure.',
-    isComplete: false
-  },
-  {
-    id: 2,
-    description: 'Mollit laborum cillum pariatur et adipisicing aliquip officia pariatur esse Lorem eiusmod exercitation mollit.',
-    isComplete: false
-  },
-  {
-    id: 3,
-    description: 'Exercitation commodo cillum nulla consequat laboris esse amet ad mollit elit cillum non.',
-    isComplete: false
-  },
-  {
-    id: 4,
-    description: 'Excepteur do ex do id magna veniam enim.',
-    isComplete: true
-  },
-  {
-    id: 5,
-    description: 'Pariatur ad et adipisicing proident adipisicing.',
-    isComplete: true
-  }
-]
+interface ToDoListProps {
+  toDos: ToDo[];
+}
 
-export function ToDoList() {
+export function ToDoList({ toDos }: ToDoListProps) {
   return (
     <div className={styles.toDo}>
       <header>
@@ -46,9 +23,9 @@ export function ToDoList() {
       </header>
 
       <main className={styles.toDoList}>
-        {tasks.length > 0 ? (
-          tasks.map(task => (
-            <ToDoItem key={task.id} id={task.id} />
+        {toDos.length > 0 ? (
+          toDos.map(task => (
+            <ToDoItem key={task.id} {...task} />
           ))
         ) : (
           <EmptyList />
