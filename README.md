@@ -60,3 +60,4 @@ npm run dev
 - [Typescript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
 - [CSS Modules](https://vitejs.dev/guide/features.html#css-modules) - A CSS file in which all class names and animation names are scoped locally by default.
 - [UUID](https://www.npmjs.com/package/uuid) - A library to generate unique identifiers.
+- [Radix UI](https://www.radix-ui.com/) - A collection of accessible, production-ready, and highly customizable UI primitives.
