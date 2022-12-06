@@ -1,0 +1,84 @@
+.toDoItem {
+  display: flex;
+  width: 100%;
+  gap: 0.75rem;
+  /* align-items: flex-start; */
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-400);
+  background-color: var(--gray-500);
+}
+
+.toDoItem > label {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.toDoItem > button[role="checkbox"][aria-checked="true"] {
+  background-color: var(--purple-dark);
+  width: 1.09rem;
+  height: 1.09rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.125rem solid var(--purple-dark);
+}
+
+.toDoItem > button[role="checkbox"][aria-checked="true"] + label {
+  text-decoration: line-through;
+}
+
+.toDoItem > button[role="checkbox"][aria-checked="false"] {
+  background-color: var(--gray-700);
+  width: 1.09rem;
+  height: 1.09rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.125rem solid var(--blue);
+}
+
+.toDoItem > button[role="checkbox"][aria-checked="true"]:hover {
+  background-color: var(--purple);
+  border: 0.125rem solid var(--purple);
+}
+
+.toDoItem > button[role="checkbox"][aria-checked="false"]:hover {
+  border: 0.125rem solid var(--blue-dark);
+}
+
+.toDoItem > button[role="checkbox"] {
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  margin-top: 0.12rem;
+}
+
+.toDoItem > button[role="checkbox"] > span {
+  display: flex;
+}
+
+.toDoItem > button[role="checkbox"] > span > svg {
+  color: var(--gray-100);
+}
+
+.deleteButton {
+  background-color: transparent; 
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  color: var(--gray-300);
+  transition: color 0.2s ease-in-out;
+}
+
+.deleteButton:hover {
+  color: var(--danger);
+}
