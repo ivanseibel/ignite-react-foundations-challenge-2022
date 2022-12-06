@@ -12,8 +12,8 @@ Revisiting the foundations of React using Vite, React and Typescript.
 
 In this challenge, the developer needs to create a task management application in the style of **to-do list** that includes the following features:
 
-- Create a new task.
-- Check and uncheck a task as completed 
+- [x] Create a new task.
+- [x] Check and uncheck a task as completed 
 - Remove a completed task from the list 
 - Display the progress of completed tasks
 
