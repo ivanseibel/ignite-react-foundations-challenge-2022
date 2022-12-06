@@ -14,8 +14,8 @@ In this challenge, the developer needs to create a task management application i
 
 - [x] Create a new task.
 - [x] Check and uncheck a task as completed 
-- Remove a completed task from the list 
-- Display the progress of completed tasks
+- [ ] Remove a completed task from the list 
+- [ ] Display the progress of completed tasks
 
 Despite the fact this is an extremely simple project, it's still a good opportunity to test React concepts like:
 
