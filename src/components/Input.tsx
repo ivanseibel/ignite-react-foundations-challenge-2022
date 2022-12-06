@@ -1,19 +1,45 @@
 import { PlusCircle } from 'phosphor-react'
+import { useState } from 'react';
+import { v4 } from 'uuid';
+
+import { ToDo } from '../hooks/useToDo';
 
 import styles from './Input.module.css'
 
-export function Input() {
+interface InputProps {
+  onCreateNewToDo: (newToDo: ToDo) => void;
+}
+
+export function Input({ onCreateNewToDo }: InputProps) {
+  const [description, setDescription] = useState('')
+
+  function handleSubmit(event: React.FormEvent) {
+    event.preventDefault()
+
+    console.log(description)
+
+    const newToDo = {
+      id: v4(),
+      description,
+      isComplete: false
+    }
+
+    onCreateNewToDo(newToDo);
+  }
+
   return (
-    <div className={styles.input}>
+    <form onSubmit={handleSubmit} className={styles.input}>
       <input
         className={styles.input}
+        value={description}
+        onChange={event => setDescription(event.target.value)}
         type="text"
-        placeholder="Adicione uma tarefa"
+        placeholder="Add a new task"
       />
       <button>
         Create
         <PlusCircle size={16} />
       </button>
-    </div>
+    </form>
   )
 }
