@@ -5,6 +5,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Technical Choices](#technical_choices)
+- [Issues](#issues)
 - [To Do](#todo)
 
 ## About <a name = "about"></a>
@@ -62,6 +63,10 @@ npm run dev
 - [CSS Modules](https://vitejs.dev/guide/features.html#css-modules) - A CSS file in which all class names and animation names are scoped locally by default.
 - [UUID](https://www.npmjs.com/package/uuid) - A library to generate unique identifiers.
 - [Radix UI](https://www.radix-ui.com/) - A collection of accessible, production-ready, and highly customizable UI primitives.
+
+## Issues <a name = "issues"></a>
+
+- [ ] When a task is created, the input field is not cleared.
 
 ## To Do <a name = "todo"></a>
 
