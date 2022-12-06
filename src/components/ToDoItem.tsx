@@ -5,11 +5,21 @@ import { CheckIcon } from '@radix-ui/react-icons';
 import styles from './ToDoItem.module.css';
 import { ToDo } from '../hooks/useToDo';
 
-export const ToDoItem = ({ id, description, isComplete }:ToDo) => {
+interface ToDoItemProps extends ToDo {
+  onToggle: (id: string) => void;
+}
+
+
+export const ToDoItem = ({ id, description, isComplete, onToggle }:ToDoItemProps) => {
+  function handleToggle() {
+    onToggle(id)
+  }
+
   return (
     <div className={styles.toDoItem}>
       <Checkbox.Root 
         id={`c1-${id}`}
+        onCheckedChange={handleToggle}
       >
         <Checkbox.Indicator className="CheckboxIndicator">
           <CheckIcon />
