@@ -5,9 +5,10 @@ import { ToDo, useToDo } from '../hooks/useToDo';
 
 interface ToDoListProps {
   toDos: ToDo[];
+  onToggle: (id: string) => void;
 }
 
-export function ToDoList({ toDos }: ToDoListProps) {
+export function ToDoList({ toDos, onToggle }: ToDoListProps) {
   return (
     <div className={styles.toDo}>
       <header>
@@ -25,7 +26,11 @@ export function ToDoList({ toDos }: ToDoListProps) {
       <main className={styles.toDoList}>
         {toDos.length > 0 ? (
           toDos.map(task => (
-            <ToDoItem key={task.id} {...task} />
+            <ToDoItem 
+              key={task.id}
+              onToggle={onToggle} 
+              {...task} 
+            />
           ))
         ) : (
           <EmptyList />
