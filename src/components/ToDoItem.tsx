@@ -7,12 +7,21 @@ import { ToDo } from '../hooks/useToDo';
 
 interface ToDoItemProps extends ToDo {
   onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
 
-export const ToDoItem = ({ id, description, isComplete, onToggle }:ToDoItemProps) => {
+export const ToDoItem = ({ id, description, isComplete, onToggle, onDelete }:ToDoItemProps) => {
   function handleToggle() {
     onToggle(id)
+  }
+
+  function handleDelete() {
+    if (!isComplete) {
+      alert('You must complete the task before deleting it.')
+      return
+    }
+    onDelete(id)
   }
 
   return (
@@ -28,7 +37,11 @@ export const ToDoItem = ({ id, description, isComplete, onToggle }:ToDoItemProps
       <label htmlFor={`c1-${id}`}>
         {description}
       </label>
-      <button type="button" className={styles.deleteButton} >
+      <button 
+        type="button" 
+        className={styles.deleteButton}
+        onClick={handleDelete} 
+      >
         <Trash width={14} />
       </button>
     </div>
