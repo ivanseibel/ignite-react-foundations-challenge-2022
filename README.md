@@ -5,6 +5,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Technical Choices](#technical_choices)
+- [To Do](#todo)
 
 ## About <a name = "about"></a>
 
@@ -61,3 +62,8 @@ npm run dev
 - [CSS Modules](https://vitejs.dev/guide/features.html#css-modules) - A CSS file in which all class names and animation names are scoped locally by default.
 - [UUID](https://www.npmjs.com/package/uuid) - A library to generate unique identifiers.
 - [Radix UI](https://www.radix-ui.com/) - A collection of accessible, production-ready, and highly customizable UI primitives.
+
+## To Do <a name = "todo"></a>
+
+- [ ] Add an option to move completed tasks to the bottom of the list
+- [ ] Allow users to move tasks up and down the list
