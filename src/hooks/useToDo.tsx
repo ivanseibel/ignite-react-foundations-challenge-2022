@@ -48,5 +48,19 @@ export function useToDo() {
     setToDos(newToDos)
   }
 
-  return { toDos, addToDo, toggleToDo }
+  function deleteCompleted(id: string) {
+    const newToDos = toDos.filter((toDo) => {
+      if (toDo.id === id) {
+        if (toDo.isComplete) {
+          return false
+        }
+        return true
+      }
+      return true
+    })
+
+    setToDos(newToDos)
+  }
+
+  return { toDos, addToDo, toggleToDo, deleteCompleted }
 }
