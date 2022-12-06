@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export interface ToDo {
   id: string
@@ -30,5 +30,23 @@ export function useToDo() {
     setToDos([...toDos, newToDo])
   }
 
-  return { toDos, addToDo }
+  const toggleToDo = (id: string) => {
+    console.log(id)
+
+    const newToDos = toDos.map((toDo) => {
+      if (toDo.id === id) {
+        return {
+          ...toDo,
+          isComplete: !toDo.isComplete
+        }
+      }
+      return toDo
+    })
+
+    console.log(newToDos)
+
+    setToDos(newToDos)
+  }
+
+  return { toDos, addToDo, toggleToDo }
 }
