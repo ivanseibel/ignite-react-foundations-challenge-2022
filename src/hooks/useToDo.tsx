@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 export interface ToDo {
   id: string
@@ -62,5 +62,10 @@ export function useToDo() {
     setToDos(newToDos)
   }
 
-  return { toDos, addToDo, toggleToDo, deleteCompleted }
+  const totalCompleted = useMemo(() => {
+    return toDos.filter((toDo) => toDo.isComplete).length
+  }, [toDos])
+
+
+  return { toDos, addToDo, toggleToDo, deleteCompleted, totalCompleted }
 }
