@@ -72,3 +72,4 @@ npm run dev
 
 - [ ] Add an option to move completed tasks to the bottom of the list
 - [ ] Allow users to move tasks up and down the list
+- [x] Implement responsive design
