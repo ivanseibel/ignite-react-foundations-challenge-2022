@@ -39,7 +39,7 @@ export function Input({ onCreateNewToDo }: InputProps) {
         placeholder="Add a new task"
       />
       <button>
-        Create
+        Add
         <PlusCircle size={16} />
       </button>
     </form>
