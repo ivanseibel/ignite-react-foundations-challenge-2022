@@ -25,6 +25,8 @@ export function Input({ onCreateNewToDo }: InputProps) {
     }
 
     onCreateNewToDo(newToDo);
+
+    setDescription('')
   }
 
   return (
