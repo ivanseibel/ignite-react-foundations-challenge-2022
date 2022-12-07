@@ -6,13 +6,18 @@ import { ToDoList } from './components/ToDoList'
 import { useToDo } from './hooks/useToDo'
 
 function App() {
-  const { toDos, addToDo, toggleToDo, deleteCompleted } = useToDo();
+  const { toDos, addToDo, toggleToDo, deleteCompleted, totalCompleted } = useToDo();
   return (
-    <div>
+    <div className={styles.outerWrapper}>
       <Header />
       <main className={styles.wrapper}>
         <Input onCreateNewToDo={addToDo} />
-        <ToDoList toDos={toDos} onToggle={toggleToDo} onDelete={deleteCompleted} />
+        <ToDoList 
+          toDos={toDos} 
+          onToggle={toggleToDo} 
+          onDelete={deleteCompleted} 
+          totalCompleted={totalCompleted}
+        />
       </main>
     </div>
   )

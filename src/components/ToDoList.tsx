@@ -7,20 +7,21 @@ interface ToDoListProps {
   toDos: ToDo[];
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
+  totalCompleted: number;
 }
 
-export function ToDoList({ toDos, onToggle, onDelete }: ToDoListProps) {
+export function ToDoList({ toDos, onToggle, onDelete, totalCompleted }: ToDoListProps) {
   return (
     <div className={styles.toDo}>
       <header>
         <div className={styles.createdSummary}>
           <span>Created</span>
-          <div className={styles.summary}>0</div>
+          <div className={styles.summary}>{toDos.length}</div>
         </div>
 
         <div className={styles.dueSummary}>
-          <span>Due</span>
-          <div className={styles.summary}>0</div>
+          <span>Completed</span>
+          <div className={styles.summary}>{totalCompleted} of {toDos.length}</div>
         </div>
       </header>
 
