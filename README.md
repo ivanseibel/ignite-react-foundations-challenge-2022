@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [About](#about)
+- [Screenshots](#screenshots)
 - [Getting Started](#getting_started)
 - [Technical Choices](#technical_choices)
 - [Issues](#issues)
@@ -26,6 +27,10 @@ Despite the fact this is an extremely simple project, it's still a good opportun
 - Lists and keys in ReactJS
 - Properties
 - Componentization
+
+## Screenshots <a name = "screenshots"></a>
+
+![Screenshot 1](./screenshots/screenshot1.png)
 
 ## Getting Started <a name = "getting_started"></a>
 
