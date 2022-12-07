@@ -1,4 +1,9 @@
+.outerWrapper{
+  padding: 0 1.6875rem;
+}
+
 .wrapper {
   max-width: 46rem;
   margin: -1.6875rem auto;
+  /* padding: 0 1.6875rem; */
 }

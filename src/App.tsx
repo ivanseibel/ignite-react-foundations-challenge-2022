@@ -8,7 +8,7 @@ import { useToDo } from './hooks/useToDo'
 function App() {
   const { toDos, addToDo, toggleToDo, deleteCompleted, totalCompleted } = useToDo();
   return (
-    <div>
+    <div className={styles.outerWrapper}>
       <Header />
       <main className={styles.wrapper}>
         <Input onCreateNewToDo={addToDo} />
