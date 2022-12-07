@@ -17,7 +17,7 @@ In this challenge, the developer needs to create a task management application i
 - [x] Create a new task.
 - [x] Check and uncheck a task as completed 
 - [x] Remove a completed task from the list 
-- [ ] Display the progress of completed tasks
+- [x] Display the progress of completed tasks
 
 Despite the fact this is an extremely simple project, it's still a good opportunity to test React concepts like:
 
@@ -66,7 +66,7 @@ npm run dev
 
 ## Issues <a name = "issues"></a>
 
-- [ ] When a task is created, the input field is not cleared.
+- [x] When a task is created, the input field is not cleared.
 
 ## To Do <a name = "todo"></a>
 
